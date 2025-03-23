@@ -9,7 +9,7 @@ setup(
     long_description_content_type='text/markdown',
     author='Ahmed Youssef',
     author_email='ahmed.youssef@compit.aun.edu.eg',
-    url='https://github.com/ay131/odoo_xmlrpc',
+    url='https://github.com/ay131/dgt_rpc',
     license='MIT',
     install_requires=[
         # No external dependencies required as xmlrpc.client is part of the standard library
