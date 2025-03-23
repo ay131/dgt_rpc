@@ -3,20 +3,20 @@
 Welcome to the documentation for the DGT RPC Client, a powerful Python library for interacting with DgteraERP systems via XML-RPC.
 
 ## Contents
-- [Installation](installation.md)
-- [Getting Started](getting_started.md)
-- [Usage Examples](usage_examples.md)
-- [API Reference](api_reference.md)
-- [Configuration](configuration.md)
-- [Advanced Usage](advanced_usage.md)
-- [Troubleshooting](troubleshooting.md)
-- [Contributing](contributing.md)
-- [License](../LICENSE)
-- [Support](support.md)
-- [FAQ](faq.md)
-- [Changelog](changelog.md)
-- [Security](security.md)
-
+- [Installation](./docs/installation.md)
+- [Getting Started](./docs/getting_started.md)
+- [Usage Examples](./docs/usage_examples.md)
+- [API Reference](./docs/api_reference.md)
+- [Configuration](./docs/configuration.md)
+- [Advanced Usage](./docs/advanced_usage.md)
+- [Troubleshooting](./docs/troubleshooting.md)
+- [Contributing](./docs/contributing.md)
+- [License](./LICENSE)
+- [Support](./docs/support.md)
+- [FAQ](./docs/faq.md)
+- [Changelog](./docs/changelog.md)
+- [Security](./docs/security.md)
+    
 # DGT RPC Client
 
 A powerful and flexible Python client for interacting with DgteraERP systems via XML-RPC protocol, specifically designed for DGTera environments.
