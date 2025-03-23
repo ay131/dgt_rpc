@@ -7,12 +7,12 @@ setup(
     description='A simple client for interacting with Odoo via XML-RPC',
     long_description=open('README.md').read(),
     long_description_content_type='text/markdown',
-    author='ahmed Youssef',
+    author='Ahmed Youssef',
     author_email='ahmed.youssef@compit.aun.edu.eg',
     url='https://github.com/ay131/odoo_xmlrpc',
     license='MIT',
     install_requires=[
-        'xmlrpc.client',  # Ensure this is a valid package if external, or remove if stdlib
+        # No external dependencies required as xmlrpc.client is part of the standard library
     ],
     classifiers=[
         'Development Status :: 3 - Alpha',
@@ -22,5 +22,8 @@ setup(
         'Programming Language :: Python :: 3.7',
         'Programming Language :: Python :: 3.8',
         'Programming Language :: Python :: 3.9',
+        'Programming Language :: Python :: 3.10',
+        'Programming Language :: Python :: 3.11',
     ],
+    python_requires='>=3.7',
 ) 
