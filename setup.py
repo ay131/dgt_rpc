@@ -1,8 +1,8 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='odoo_xmlrpc',
-    version='0.1.0',
+    name="dgt_rpc",
+    version="0.1.0",
     packages=find_packages(),
     description='A simple client for interacting with Odoo via XML-RPC',
     long_description=open('README.md').read(),
@@ -12,7 +12,7 @@ setup(
     url='https://github.com/ay131/dgt_rpc',
     license='MIT',
     install_requires=[
-        # No external dependencies required as xmlrpc.client is part of the standard library
+        # Add your dependencies here
     ],
     classifiers=[
         'Development Status :: 3 - Alpha',
@@ -24,6 +24,7 @@ setup(
         'Programming Language :: Python :: 3.9',
         'Programming Language :: Python :: 3.10',
         'Programming Language :: Python :: 3.11',
+        'Operating System :: OS Independent',
     ],
     python_requires='>=3.7',
 ) 

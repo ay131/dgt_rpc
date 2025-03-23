@@ -13,6 +13,9 @@ Welcome to the documentation for the DGT RPC Client, a powerful Python library f
 - [Contributing](contributing.md)
 - [License](../LICENSE)
 - [Support](support.md)
+- [FAQ](faq.md)
+- [Changelog](changelog.md)
+- [Security](security.md)
 
 # DGT RPC Client
 
