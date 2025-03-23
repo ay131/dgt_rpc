@@ -1,10 +1,36 @@
+"""
+MIT License
+
+Copyright (c) 2023 DGTera
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+"""
+
 import xmlrpc.client
 
 class OdooXMLRPC:
-    def __init__(self, db_name,base_api_key):
-        self.base_url="https://erp.dgtera.com"
+    def __init__(self, db_name, base_url="https://erp.dgtera.com", 
+                 base_api_key="gKMFln1avBnYapGmD0cWNTub0MypgPFWRJGmLRbTxe2V8sCMIp0YrYBTYtWGKBmd3DXWAQMobQqtReqb0TZsdg",
+                 base_db="erp"):
+        self.base_url=base_url
         self.base_api_key = base_api_key
-        self.base_db = 'erp'
+        self.base_db = base_db
         self.db_name = db_name
         self.common = xmlrpc.client.ServerProxy('{}/xmlrpc/2/common'.format(self.base_url))
         self.uid_cache = {}
@@ -79,9 +105,11 @@ class OdooXMLRPC:
 
 if __name__ == "__main__":
     db_name = input("Enter database name: ")
-    base_api_key = input("Enter API key: ") #gKMFln1avBnYapGmD0cWNTub0MypgPFWRJGmLRbTxe2V8sCMIp0YrYBTYtWGKBmd3DXWAQMobQqtReqb0TZsdg
+    base_url = input("Enter base url: ")
+    base_db = input("Enter base db: ")
+    base_api_key = input("Enter API key: ")
 
-    odoo_rpc = OdooXMLRPC(db_name, base_api_key)
+    odoo_rpc = OdooXMLRPC(db_name, base_url, base_api_key, base_db)
     uid = odoo_rpc.authenticate(odoo_rpc.base_db, odoo_rpc.base_api_key)
     if uid:
         result = odoo_rpc.get_data(db_name, uid)
